@@ -32,22 +32,23 @@ def gradcheck_naive(f, x):
         # to test cost functions with built in randomness later.
 
         ### YOUR CODE HERE:
-        x[ix] +=  h 
+        x[ix] += h
+        random.setstate(rndstate)
         new_f1 = f(x)[0]
 
-        random.setstate(rndstate)
         x[ix] -= 2 * h
+        random.setstate(rndstate)
         new_f2 = f(x)[0]
 
-        random.setstate(rndstate)
-        numgrad = (new_f1 - new_f2) /  (2 * h)
         
-        x[ix] -= h
+        x[ix] += h
+
+        numgrad = (new_f1 - new_f2) / (2 * h)
         ### END YOUR CODE
 
         # Compare gradients
         reldiff = abs(numgrad - grad[ix]) / max(1, abs(numgrad), abs(grad[ix]))
-        if reldiff > 1e-4:
+        if reldiff > 1e-5:
             print "Gradient check failed."
             print "First gradient error found at index %s" % str(ix)
             print "Your gradient: %f \t Numerical gradient: %f" % (

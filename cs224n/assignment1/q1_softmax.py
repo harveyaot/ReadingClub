@@ -33,7 +33,7 @@ def softmax(x):
         # YOUR CODE HERE
         x = np.apply_along_axis(lambda x: np.exp(x - np.max(x)), 1, x)
         denominator = np.apply_along_axis(lambda x: 1.0 / np.sum(x), 1, x)
-        print denominator
+        #print denominator.shape
         denominator = denominator.reshape(denominator.shape[0], 1)
         return x * denominator
         # END YOUR CODE

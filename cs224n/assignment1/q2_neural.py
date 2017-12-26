@@ -68,7 +68,7 @@ def sanity_check():
     """
     print "Running sanity check..."
 
-    N = 20
+    N = 20  # meaning M in neural
     dimensions = [10, 5, 10]
     data = np.random.randn(N, dimensions[0])   # each row will be a datum
     labels = np.zeros((N, dimensions[2]))
@@ -97,4 +97,4 @@ def your_sanity_checks():
 
 if __name__ == "__main__":
     sanity_check()
-    your_sanity_checks()
+    #your_sanity_checks()
