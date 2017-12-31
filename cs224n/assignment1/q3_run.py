@@ -32,10 +32,14 @@ wordVectors = np.concatenate(
     ((np.random.rand(nWords, dimVectors) - 0.5) /
        dimVectors, np.zeros((nWords, dimVectors))),
     axis=0)
+
+print "Has %s tokens" % nWords
+print "wordVectors shape. %v",  (wordVectors.shape)
+
 wordVectors = sgd(
     lambda vec: word2vec_sgd_wrapper(skipgram, tokens, vec, dataset, C,
         negSamplingCostAndGradient),
-    wordVectors, 0.3, 40000, None, True, PRINT_EVERY=10)
+    wordVectors, 0.3, 50000, None, True, PRINT_EVERY=10)
 # Note that normalization is not called here. This is not a bug,
 # normalizing during training loses the notion of length.
 
@@ -46,6 +50,7 @@ print "training took %d seconds" % (time.time() - startTime)
 wordVectors = np.concatenate(
     (wordVectors[:nWords,:], wordVectors[nWords:,:]),
     axis=0)
+print "wordVectors shape after sgd.", (wordVectors.shape)
 # wordVectors = wordVectors[:nWords,:] + wordVectors[nWords:,:]
 
 visualizeWords = [
@@ -57,8 +62,15 @@ visualizeWords = [
 visualizeIdx = [tokens[word] for word in visualizeWords]
 visualizeVecs = wordVectors[visualizeIdx, :]
 temp = (visualizeVecs - np.mean(visualizeVecs, axis=0))
+print "temp shape",  (temp.shape)
+print np.mean(visualizeVecs, axis=0).shape
 covariance = 1.0 / len(visualizeIdx) * temp.T.dot(temp)
+print "covariance shape." , (covariance.shape)
 U,S,V = np.linalg.svd(covariance)
+print "U shape", (U.shape)
+print "S shape", (S.shape)
+print "V shape", (V.shape)
+
 coord = temp.dot(U[:,0:2])
 
 for i in xrange(len(visualizeWords)):
