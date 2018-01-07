@@ -110,7 +110,7 @@ def sanity_check():
     quad = lambda x: (np.sum(x ** 2), x * 2)
 
     print "Running sanity checks..."
-    t1 = sgd(quad, 0.5, 0.01, 1000, PRINT_EVERY=100)
+    t1 = sgd(quad, 0.5, 0.3, 1000, PRINT_EVERY=100)
     print "test 1 result:", t1
     assert abs(t1) <= 1e-6
 
