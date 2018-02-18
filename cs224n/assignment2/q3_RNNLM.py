@@ -29,7 +29,7 @@ class Config(object):
     embed_size = 50
     hidden_size = 100
     num_steps = 10
-    max_epochs = 16
+    max_epochs = 20
     early_stopping = 2
     dropout = 0.9
     lr = 0.001
@@ -150,8 +150,7 @@ class RNNLM_Model(LanguageModel):
 
     def add_loss_op(self, output):
         """Adds loss ops to the computational graph.
-
-        Hint: Use tensorflow.python.ops.seq2seq.sequence_loss to implement sequence loss.
+Hint: Use tensorflow.python.ops.seq2seq.sequence_loss to implement sequence loss.
 
         Args:
           output: A tensor of shape (None, self.vocab)
@@ -324,8 +323,11 @@ def generate_text(session, model, config, starting_text='<eos>',
     tokens = [model.vocab.encode(word) for word in starting_text.split()]
     for i in xrange(stop_length):
         # YOUR CODE HERE
-        raise NotImplementedError
-        # END YOUR CODE
+        if i < len(tokens) - 1:
+            state, _ = feed_token(session, model, state, tokens[i])
+            continue
+        state, y_pred = feed_token(session, model, state, tokens[-1])
+        # END YOUR CODE HERE 
         next_word_idx = sample(y_pred[0], temperature=temp)
         tokens.append(next_word_idx)
         if stop_tokens and model.vocab.decode(tokens[-1]) in stop_tokens:
@@ -333,6 +335,13 @@ def generate_text(session, model, config, starting_text='<eos>',
     output = [model.vocab.decode(word_idx) for word_idx in tokens]
     return output
 
+def feed_token(session, model, state, token):
+  state, y_pred = session.run(
+      [model.final_state, model.predictions[-1]],
+      feed_dict={model.initial_state: state,
+                 model.input_placeholder: [[token]],
+                 model.dropout_placeholder: 1.0})
+  return state, y_pred 
 
 def generate_sentence(session, model, config, *args, **kwargs):
     """Convenice to generate a sentence from the model."""
