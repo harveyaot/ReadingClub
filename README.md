@@ -8,7 +8,8 @@ this is a very new  and cool class, stanford had this class last year, but with 
 
     1. assignment 1 
     
-    basic but very important, which shows you how to leverage numpy to do linear algebra calcualtions. the contents include:
+    basic but very important, which shows you how to leverage numpy to do linear algebra calcualtions. 
+    the contents include:
 
         * softmax and sigmoid function
         * gradcheck
