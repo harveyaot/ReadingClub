@@ -1,8 +1,8 @@
 # Paper Reading List
 
 ## Recommendation
-* 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://www.microsoft.com/en-us/research/uploads/prod/2021/12/wsdm2022-hcb.pdf) [***MAB***]
-* 04/11 2022 [Show Me the Whole World: Towards Entire Item Space Exploration for Interactive Personalized Recommendations](https://arxiv.org/pdf/1003.0146.pdf) [***LinUCB***]
+* 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://www.microsoft.com/en-us/research/uploads/prod/2021/12/wsdm2022-hcb.pdf) [***LinUCB***]
+* 04/11 2022 [Show Me the Whole World: Towards Entire Item Space Exploration for Interactive Personalized Recommendations](https://arxiv.org/pdf/1003.0146.pdf) [***MAB***]
 ## NLP
 * 04/05 2022 [Adversarial NLI: A New Benchmark for Natural Language Understanding](https://arxiv.org/pdf/1910.14599.pdf) [***NLP***, ***ANLI***]
 * 04/03 2022 [Evaluating the Factual Consistency of Abstractive Text Summarization](https://arxiv.org/pdf/1910.12840.pdf) [***NLG***, ***consistency***]
