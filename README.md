@@ -1,6 +1,7 @@
 # Paper Reading List
 
 ## Recommendation
+* 10/02 2022 [Values of User Exploration in Recommender Systems] (https://dl.acm.org/doi/pdf/10.1145/3460231.3474236) [***Exploration***]
 * 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://arxiv.org/pdf/1003.0146.pdf)) [***LinUCB***]
 * 04/11 2022 [Show Me the Whole World: Towards Entire Item Space Exploration for Interactive Personalized Recommendations](https://arxiv.org/pdf/1003.0146.pdf) [***MAB***]
 ## NLP
