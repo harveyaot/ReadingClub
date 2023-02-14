@@ -6,6 +6,7 @@
 * 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://arxiv.org/pdf/1003.0146.pdf) [***LinUCB***]
 * 04/11 2022 [Show Me the Whole World: Towards Entire Item Space Exploration for Interactive Personalized Recommendations](https://arxiv.org/pdf/1003.0146.pdf) [***MAB***]
 ## NLP
+* 2/14 2023 [https://arxiv.org/pdf/2110.06696.pdf](https://arxiv.org/pdf/2110.06696.pdf) [***T5***]
 * 01/08 2023 [Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf) [**GPT**]
 * 04/05 2022 [Adversarial NLI: A New Benchmark for Natural Language Understanding](https://arxiv.org/pdf/1910.14599.pdf) [***NLP***, ***ANLI***]
     * HI + AI pipeline
