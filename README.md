@@ -1,6 +1,7 @@
 # Paper Reading List
 
 ## Recommendation
+* 2/20 2023  [Large Scale Product Graph Construction for Recommendation in E-commerce](https://arxiv.org/pdf/2010.05525.pdf) [***Swingi2i***]
 * 1/10 2023  [DRN- A Deep Reinforcement Learning Framework for News Recommendation](https://github.com/wzhe06/Reco-papers/blob/master/Reinforcement%20Learning%20in%20Reco/DRN-%20A%20Deep%20Reinforcement%20Learning%20Framework%20for%20News%20Recommendation%20\(MSRA%202018\).pdf) [***RL***] 
 * 10/02 2022 [Values of User Exploration in Recommender Systems](https://dl.acm.org/doi/pdf/10.1145/3460231.3474236) [***Exploration***]
 * 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://arxiv.org/pdf/1003.0146.pdf) [***LinUCB***]
