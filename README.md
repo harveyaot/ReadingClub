@@ -7,6 +7,8 @@
 * 04/18 2022 [A Contextual-Bandit Approach to Personalized News Article Recommendation](https://arxiv.org/pdf/1003.0146.pdf) [***LinUCB***]
 * 04/11 2022 [Show Me the Whole World: Towards Entire Item Space Exploration for Interactive Personalized Recommendations](https://arxiv.org/pdf/1003.0146.pdf) [***MAB***]
 ## NLP
+* 3/1 2023 [MULTITASK PROMPTED TRAINING ENABLES ZERO-SHOT TASK GENERALIZATION](https://arxiv.org/pdf/2110.08207.pdf)
+* 3/1 2023 [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf)
 * 2/27 2023 [Scaling Instruction-Finetuned Language Models](https://arxiv.org/pdf/2210.11416.pdf)
 * 2/14 2023 [Mengzi: Towards Lightweight yet Ingenious Pre-trained Models for Chinese](https://arxiv.org/pdf/2110.06696.pdf) [***T5***]
 * 01/08 2023 [Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155.pdf) [**GPT**]
